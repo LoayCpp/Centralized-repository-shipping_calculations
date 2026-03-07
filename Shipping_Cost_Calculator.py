@@ -1,12 +1,21 @@
 # Shipping Cost Calculator
 
-## Input package weight and shipping rate
-weight = float(input("Enter the package weight in kilograms: "))
-rate = float(input("Enter the shipping rate per kilogram: "))
+def main():
+    try:
+        weight = float(input("Enter package weight (kg): "))
+        rate = float(input("Enter shipping rate per kg: "))
 
-## Calculate shipping cost
-shipping_cost = weight * rate
+        # Validate input
+        if weight <= 0 or rate <= 0:
+            print("Weight and rate must be positive numbers.")
+            return
 
-## Display the result
-print(f"Shipping Cost: {shipping_cost} USD")
+        shipping_cost = weight * rate
 
+        print(f"Shipping Cost: {shipping_cost:.2f} USD")
+
+    except ValueError:
+        print("Invalid input! Please enter numeric values.")
+
+if __name__ == "__main__":
+    main()
