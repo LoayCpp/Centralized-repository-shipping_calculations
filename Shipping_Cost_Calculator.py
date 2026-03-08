@@ -1,6 +1,5 @@
 # Shipping Cost Calculator
  # Here is a new update by LoayCpp
-# Here is another update by LoayCpp
 
 def main():
     try:
